@@ -1,14 +1,12 @@
-# UBC LHD Build Day
-## Python Workshop
+# Submission for UBC LHD Build Day (Theme: "diversity, inclusivity, and accessibility")
+## The Problem
+In the USA, there are 250 000 to 500 000 individuals who know ASL. Out of the total population, that is .2%. Most of these indivudals are deaf or hard of hearing, and in order to interact with the world, must rely on observing mouth patterns, which can be difficult due to each indivudals unique speech pattern. 
 
-This workshop will walk you through how to build and deploy a simple Python app that serves a simple webpage that fetches data from the Google Maps API.
 
-### What's in this repository?
+### Our Solution 
+Our solution is a web app that quickly translates speech to ASL. Users can either type or speak directly to the webapp, and in return, are given a translation of their speech in ASL. A Google cloud API that utilizes neural networks is able to translate speech with astounding accuracy. The app is easy to use, and more efficent than searching up commands. This creates a pathway for those hard of hearing and those who have never been introduced to ASL.
 
-Scaffolding for the project, and a basic `main.py`. Throughout this workshop, we'll be *actually writing code*! This branch serves as the base for what we'll be building off of. Starting off, we won't be touching the `templates` and `static` folders for now, so don't worry about those.
-
-### 0. Setup
-
+### How we built it
 0. **Installing Python**  <br>
 We will be using `Python 3.6.5` for this workshop. If you have another version of Python, it should still work but you may run into dependency issues. Here's the link to the [download for Python 3.](https://www.python.org/downloads/release/python-365/) Check if you've installed it properly by making sure you can run `python` and `pip` in the terminal.
 
