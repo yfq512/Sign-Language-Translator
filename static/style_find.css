@@ -422,7 +422,7 @@ body {
   src: url('GallaudetRegular.ttf');
 }
 
-p {
+.signlanguage {
   font-family: Sign;
   font-size: 50px;
 }
