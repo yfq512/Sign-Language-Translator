@@ -15,24 +15,8 @@ app.config['UPLOAD_FOLDER'] = PEOPLE_FOLDER
 
 API_URL = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?inputtype=textquery&locationbias=ipbias&fields=formatted_address,name,rating&"
 
-
-@app.route('/')
-def hello():
-    return "Hello World!"
-
-# path parameters
-@app.route('/<name>')
-def hello_name(name):
-    return name
-
-# serving hello.html
-@app.route('/hello/<name>')
-def personal_hello(name):
-    # you can do preprocessing here!
-    return flask.render_template('hello.html', name=name)
-
 # serving find.html
-@app.route('/find', methods=['GET'])
+@app.route('/', methods=['GET'])
 def serve_page():
     return flask.render_template('find.html')
 
@@ -44,7 +28,7 @@ def process_query():
     requestString = formRequest(location)
     responses = makeGET(requestString)["candidates"]
     filename = os.path.join(app.config['UPLOAD_FOLDER'], "Mr Goose! copy.png")
-    return flask.render_template('find.html', responses=responses, images=['static/Mr Goose! copy.png', 'https://img-s3.onedio.com/id-586d0f117dd46e4747b26e8d/rev-0/w-635/f-jpg-webp/s-9b470ccf99c1a3b10d2949f97aefbff5e225eb32.webp', 'static/sign-language-alphabet.png'])
+    return flask.render_template('find.html', responses=responses, images=['static/Mr Goose! copy.png', 'https://img-s3.onedio.com/id-586d0f117dd46e4747b26e8d/rev-0/w-635/f-jpg-webp/s-9b470ccf99c1a3b10d2949f97aefbff5e225eb32.webp', 'static/sign-language-alphabet.png', 'static/test.png'], same=location)
 
 
 def formRequest(input):
