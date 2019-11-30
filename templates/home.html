@@ -1,0 +1,27 @@
+<html lang='en'>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static',
+                        filename='style.css')}}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<div class="split left">
+  <div class="centered">
+    <form action="/process_query" method="post">
+      <h1 id="header">Enter your text below!</h1>
+      <input type="text" name="user_input"><br>
+    </form>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <p class="signlanguage">{{ same }}</p>
+  </div>
+</div>
+</body>
+
+</html>
