@@ -1,9 +1,9 @@
 p {
-  font-family: Open Sans;
+  font-family: Andale Mono, monospace;
 }
 
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Andale Mono, monospace;
 }
 
 input {
@@ -19,14 +19,67 @@ input[type=text]:focus {
   border: 3px solid #55555599;
 }
 
-.centeredcol {
+.leftinput {
+  left: 0;
   width: 50%;
   margin: 15% auto;
   background-color: #ffffff88;
   padding: 1em;
   border-radius: 5px;
+  position:relative; right:400px; bottom: 100px;
 }
 
+.rightoutput {
+  right: 0;
+  background-color: #ffffff88;
+  width: 50%;
+  margin: 15% auto;
+  padding: 1em;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #B8B8FF;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: #F8F7FF;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
 .candidate {
   background-color: #ffffffbb;
   padding: 1em;
@@ -35,9 +88,11 @@ input[type=text]:focus {
 }
 
 body {
-  background-color: #80DED9;
+  background-color: #55555599;
   background-size: cover;
 }
+
+
 
 @charset "UTF-8";
 
