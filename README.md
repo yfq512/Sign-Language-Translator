@@ -1,4 +1,5 @@
-# Submission for UBC LHD Build Day (Theme: "diversity, inclusivity, and accessibility")
+# Submission for UBC LHD Build Day
+(Theme: "diversity, inclusivity, and accessibility")
 ## The Problem
 In the USA, there are 250 000 to 500 000 individuals who know ASL. Out of the total population, that is .2%. Most of these indivudals are deaf or hard of hearing, and in order to interact with the world, must rely on observing mouth patterns, which can be difficult due to each indivudals unique speech pattern. 
 
