@@ -8,27 +8,57 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
-<body>
-  <div class="centeredcol">
-    <form action="/process_query" method="post">
-      <h1 id="header">Find me a</h1>
-      <input type="text" name="some_location"><br>
-    </form>
-
-    {% for resp in responses %}
-    <div>
-      <ul id="list">
-        {% for im in images %}
-        <li><img src="{{ im }}" width="150" height="100"></li>
-        {% endfor %}
-      </ul>
-      <p id="name"><b>{{ resp.name }}</b> - {{ resp.rating }} / 5</p>
-      <p id="address">{{ resp.formatted_address }}</p>
-    </div>
-    {% endfor %}
-    <p>{{ same }}</p>
+<!-- <body>
+  <div class="leftcol">
+      <h1 id="header">Enter your text here!</h1>
   </div>
 
+  <div class="rightcol">
+      <form action="/process_query" method="post">
+        <h1 id="header">Find me a</h1>
+        <input type="text" name="some_location"><br>
+      </form>
+  
+      {% for resp in responses %}
+      <div>
+        <ul id="list">
+          {% for im in images %}
+          <li><img src="{{ im }}" width="150" height="100"></li>
+          {% endfor %}
+        </ul>
+        <p id="name"><b>{{ resp.name }}</b> - {{ resp.rating }} / 5</p>
+        <p id="address">{{ resp.formatted_address }}</p>
+      </div>
+      {% endfor %}
+      <p>{{ same }}</p>
+    </div>
+  -->
+
+    <div class="split left">
+        <div class="centered">
+            <form action="/process_query" method="post">
+              <h1 id="header">Enter your text below!</h1>
+              <input type="text" name="some_location"><br>
+            </form>
+        </div>
+      </div>
+      
+      <div class="split right">
+        <div class="centered">
+          {% for resp in responses %}
+      <div>
+        <ul id="list">
+          {% for im in images %}
+          <li><img src="{{ im }}" width="150" height="100"></li>
+          {% endfor %}
+        </ul>
+        <p id="name"><b>{{ resp.name }}</b> - {{ resp.rating }} / 5</p>
+        <p id="address">{{ resp.formatted_address }}</p>
+      </div>
+      {% endfor %}
+      <p>{{ same }}</p>
+        </div>
+      </div>
 </body>
 
 </html>
