@@ -26,7 +26,9 @@ input[type=text]:focus {
   background-color: #ffffff88;
   padding: 1em;
   border-radius: 5px;
-  position:relative; right:400px; bottom: 100px;
+  position: relative;
+  right: 400px;
+  bottom: 100px;
 }
 
 .rightoutput {
@@ -80,6 +82,7 @@ input[type=text]:focus {
   width: 150px;
   border-radius: 50%;
 }
+
 .candidate {
   background-color: #ffffffbb;
   padding: 1em;
@@ -424,5 +427,5 @@ body {
 
 .signlanguage {
   font-family: Sign;
-  font-size: 50px;
+  font-size: 100px;
 }
