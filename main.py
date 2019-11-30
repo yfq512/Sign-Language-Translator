@@ -28,7 +28,7 @@ def process_query():
     requestString = formRequest(location)
     responses = makeGET(requestString)["candidates"]
     filename = os.path.join(app.config['UPLOAD_FOLDER'], "Mr Goose! copy.png")
-    return flask.render_template('find.html', responses=responses, images=['static/Mr Goose! copy.png', 'https://img-s3.onedio.com/id-586d0f117dd46e4747b26e8d/rev-0/w-635/f-jpg-webp/s-9b470ccf99c1a3b10d2949f97aefbff5e225eb32.webp', 'static/sign-language-alphabet.png', 'static/test.png'], same=location)
+    return flask.render_template('find.html', same=location)
 
 
 def formRequest(input):
