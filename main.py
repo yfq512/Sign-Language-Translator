@@ -53,6 +53,20 @@ def processInput(input_in_list):
             input_in_list[s] = "static/please.png"
         if "thanks" in i.lower():
             input_in_list[s] = "static/thanks.png"
+        if "who" in i.lower():
+            input_in_list[s] = "static/who.png"
+        if "what" in i.lower():
+            input_in_list[s] = "static/what.png"
+        if "when" in i.lower():
+            input_in_list[s] = "static/when.png"
+        if "where" in i.lower():
+            input_in_list[s] = "static/where.png"
+        if "why" in i.lower():
+            input_in_list[s] = "static/why.png"
+        if "which" in i.lower():
+            input_in_list[s] = "static/which.png"
+        if "how" in i.lower():
+            input_in_list[s] = "static/how.png"
     return input_in_list
 
 
