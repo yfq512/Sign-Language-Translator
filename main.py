@@ -22,14 +22,23 @@ def process_query():
     data = flask.request.form  # is a dictionary
     input = data['user_input']
     input_in_list = input.split(' ')
+    return flask.render_template('home.html', same=processInput(input_in_list), og=input)
+
+def processInput(input_in_list):
     for s,i in enumerate(input_in_list):
-        if i.lower() == "hello":
+        if "bye" in i.lower():
+            input_in_list[s] = "static/bye.jpg"
+        if "hello" in i.lower():
             input_in_list[s] = "static/hello.png"
-        if i.lower() == "yes":
+        if "yes" in i.lower():
             input_in_list[s] = "static/yes.png"
-        if i.lower() == "no":
+        if "no" in i.lower():
             input_in_list[s] = "static/no.png"
-    return flask.render_template('home.html', same=input_in_list, og=input)
+        if "please" in i.lower():
+            input_in_list[s] = "static/please.png"
+        if "thanks" in i.lower():
+            input_in_list[s] = "static/thanks.png"
+    return input_in_list
 
 
 if __name__ == '__main__':
