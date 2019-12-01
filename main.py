@@ -1,4 +1,3 @@
-from __future__ import division
 
 # Our Backend for the App!
 # Built with Flask
@@ -9,23 +8,10 @@ import requests
 import os
 from flask import send_file
 
-import re
-import sys
-
-from google.cloud import speech
-from google.cloud.speech import enums
-from google.cloud.speech import types
-import pyaudio
-from six.moves import queue
-
-# Audio recording parameters
-RATE = 16000
-CHUNK = int(RATE / 10)  # 100ms
-
 # Create the application
 app = flask.Flask(__name__)
 
-# serving home.html
+# serving find.html
 @app.route('/', methods=['GET'])
 def serve_page():
     return flask.render_template('home.html')
@@ -35,7 +21,15 @@ def serve_page():
 def process_query():
     data = flask.request.form  # is a dictionary
     input = data['user_input']
-    return flask.render_template('home.html', same=input)
+    input_in_list = input.split(' ')
+    for s,i in enumerate(input_in_list):
+        if i.lower() == "hello":
+            input_in_list[s] = "static/hello.png"
+        if i.lower() == "yes":
+            input_in_list[s] = "static/yes.png"
+        if i.lower() == "no":
+            input_in_list[s] = "static/no.png"
+    return flask.render_template('home.html', same=input_in_list, og=input)
 
 
 if __name__ == '__main__':

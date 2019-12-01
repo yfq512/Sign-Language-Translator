@@ -1,6 +1,12 @@
 p {
   font-family: Andale Mono, monospace;
-  font-size: 50px;
+  padding: 0px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+div {
+  text-align: center;
 }
 
 h1 {
@@ -12,38 +18,10 @@ input {
   transition: all 0.2s;
   width: 100%;
   padding: 0.5em;
-  border-radius: 5px;
+  border-radius: 1000px;
 }
-
-
 input[type=text]:focus {
   border: 3px solid #55555599;
-}
-
-.leftinput {
-  left: 0;
-  width: 50%;
-  margin: 15% auto;
-  background-color: #ffffff88;
-  padding: 1em;
-  border-radius: 5px;
-  position: relative;
-  right: 400px;
-  bottom: 100px;
-}
-
-.rightoutput {
-  right: 0;
-  background-color: #ffffff88;
-  width: 50%;
-  margin: 15% auto;
-  padding: 1em;
-  border-radius: 5px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
 }
 
 /* Split the screen in half */
@@ -54,7 +32,6 @@ input[type=text]:focus {
   z-index: 1;
   top: 0;
   overflow-x: hidden;
-  padding-top: 20px;
 }
 
 /* Control the left side */
@@ -67,6 +44,9 @@ input[type=text]:focus {
 .right {
   right: 0;
   background-color: #F8F7FF;
+  padding: 0px;
+  text-align: center;
+  display: inline-block;
 }
 
 /* If you want the content centered horizontally and vertically */
@@ -76,11 +56,31 @@ input[type=text]:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  padding: 0px;
 }
 
 /* Style the image inside the centered container, if needed */
 .centered img {
-  width: 150px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.filled {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;  
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.filled img {
+  width: 100px;
   border-radius: 50%;
 }
 
@@ -91,13 +91,10 @@ input[type=text]:focus {
   margin-bottom: 1em;
 }
 
-body {
-  background-color: #55555599;
-  background-size: cover;
+.beside {
+  display: inline-block;
+  padding: 17px;
 }
-
-
-
 @charset "UTF-8";
 
 /*!
