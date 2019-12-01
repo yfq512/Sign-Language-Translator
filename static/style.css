@@ -2,7 +2,6 @@ p {
   font-family: Andale Mono, monospace;
   padding: 0px;
   margin: 0 auto;
-  text-align: center;
 }
 
 div {
@@ -20,6 +19,7 @@ input {
   padding: 0.5em;
   border-radius: 1000px;
 }
+
 input[type=text]:focus {
   border: 3px solid #55555599;
 }
@@ -45,8 +45,6 @@ input[type=text]:focus {
   right: 0;
   background-color: #F8F7FF;
   padding: 0px;
-  text-align: center;
-  display: inline-block;
 }
 
 /* If you want the content centered horizontally and vertically */
@@ -91,6 +89,7 @@ input[type=text]:focus {
   display: inline-block;
   padding: 17px;
 }
+
 @charset "UTF-8";
 
 /*!
